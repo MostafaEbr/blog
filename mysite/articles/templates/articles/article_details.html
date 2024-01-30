@@ -1,0 +1,17 @@
+{%extends "base_layout.html"%}
+
+{% block content%}
+<h2><a href="{% url 'articles:index'  %}">Article</a></h2>
+
+<h1>Articles List </h1>
+<div class="articles">
+    <div class="article">
+        {% if article.thumb.url is not None %}
+        <img src="{{article.thumb.url}}" width="100%" height="200">
+        {% endif %}
+        <p>{{article.title}}</p>
+        <p>{{article.body}}</p>
+        <p>{{article.date}}</p>
+    </div>
+</div>
+{% endblock %}

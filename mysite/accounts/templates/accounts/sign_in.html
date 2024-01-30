@@ -1,0 +1,19 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+
+<!--<link rel="stylesheet" href="/static/sign_up.css">-->
+
+<form class="site_signin" action=" {% url 'accounts:sign_in'%}" method="post">
+{% csrf_token %}
+
+  {{form}}
+    {% if request.GET.next %}
+  <input type="hidden" name="next" value="{{request.GET.next}}">
+
+  {% endif %}
+  <input type="submit" value="Sign in">
+
+
+
+</form>
+{% endblock %}
