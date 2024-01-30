@@ -1,0 +1,25 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+
+<!--<link rel="stylesheet" href="/static/sign_up.css">-->
+
+<form class="site_signup" action="/accounts/sign_up/" method="post">
+{% csrf_token %}
+
+  {{form}}
+  <input type="submit" value="Sign up">
+
+</form>
+<!--<div id="login-box">-->
+<!--  <div class="left">-->
+<!--    <h1>Sign up</h1>-->
+
+<!--    <input type="text" name="username" placeholder="Username" />-->
+<!--    <input type="text" name="email" placeholder="E-mail" />-->
+<!--    <input type="password" name="password" placeholder="Password" />-->
+<!--    <input type="password" name="password2" placeholder="Retype password" />-->
+
+<!--    <input type="submit" name="signup_submit" value="Sign up" />-->
+<!--  </div>-->
+<!--</div>-->
+{% endblock %}
