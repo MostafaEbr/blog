@@ -10,7 +10,7 @@ from . import forms
 
 def articles_list(request):
     articles = Article.objects.all().order_by('date')
-    return render(request, "articles/articles_list.html", {
+    return render(request, "articles/index.html", {
         "articles": articles
     })
 
